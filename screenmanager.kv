@@ -1,0 +1,30 @@
+FloatLayout:
+
+    MDTopAppBar:
+        title: ""
+        right_action_items: [["dots-vertical", lambda x:x , "Menu"]]
+        left_action_items: [["User.png", lambda x: x , "User"]]
+        specific_text_color: rgba(252,249,249,255)
+        #md_bg_color: app.theme_cls.primary_color
+        elevation: 2
+        pos_hint : {"top" : 1}
+        size_hint: 1, 0.10
+
+    ScreenManagerr:
+        pos_hint :{"top" : 0.92}
+        id: screen_manager
+        size_hint: 1, 1
+
+
+
+    MDFloatingActionButtonSpeedDial:
+        id: speed_dial
+        root_button_anim: True
+        hint_animation: True
+        label_text_color: "black"
+        bg_hint_color: app.theme_cls.primary_light
+        right_pad: True
+        right_pad_value: "8dp"
+        pos_hint: {'right': 1, 'bottom': 1}
+        bg_color_root_button : (0,0,1,1)
+

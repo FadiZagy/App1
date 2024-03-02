@@ -1,0 +1,204 @@
+<Calculator>:
+
+    MDFloatLayout:
+
+        MDTextField:
+            text:"0"
+            id: text_id
+            pos_hint :{"center_x" : 0.5 , "center_y" : 0.85}
+            mode  : "fill"
+            text_color : 1,1,1,1
+            size_hint : 0.98,0.25
+            font_size : 55
+            fill_color_normal: rgba(115, 122, 127 ,255 ) # Gray background color in normal state
+            fill_color_focus: rgba(194, 207, 216  ,255 )
+            halign : "right"
+
+
+    MDGridLayout:
+        radius : [20,]
+        md_bg_color : "grey"
+        pos_hint :{"center_x" : 0.5 , "top" : 0.72}
+        cols:4
+
+        padding:5
+        spacing:4
+        size_hint_x: 1
+        size_hint_y : 0.5
+        MDRoundFlatButton:
+            text: "%"
+            text_color: "white"
+            md_bg_color: rgba(144, 144, 153  ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+
+
+        MDRoundFlatButton:
+            text: "C"
+            text_color: "white"
+            md_bg_color: rgba(144, 144, 153  ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press : root.clear()
+        MDRoundFlatButton:
+            text: ">>"
+            text_color: "white"
+            md_bg_color: rgba(144, 144, 153  ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press : root.remove()
+        MDRoundFlatButton:
+            text: "/"
+            text_color: "white"
+            md_bg_color: rgba(144, 144, 153  ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.sign("/")
+
+
+        MDRoundFlatButton:
+            text: "7"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(7)
+
+
+        MDRoundFlatButton:
+            text: "8"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(8)
+        MDRoundFlatButton:
+            text: "9"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(9)
+        MDRoundFlatButton:
+            text: "X"
+            text_color: "white"
+            md_bg_color: rgba(144, 144, 153  ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.sign("*")
+
+        MDRoundFlatButton:
+            text: "4"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(4)
+
+
+        MDRoundFlatButton:
+            text: "5"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(5)
+        MDRoundFlatButton:
+            text: "6"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(6)
+        MDRoundFlatButton:
+            text: "-"
+            text_color: "white"
+            md_bg_color: rgba(144, 144, 153  ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.sign("-")
+
+
+        MDRoundFlatButton:
+            text: "1"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(1)
+
+        MDRoundFlatButton:
+            text: "2"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(2)
+        MDRoundFlatButton:
+            text: "3"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(3)
+        MDRoundFlatButton:
+            text: "+"
+            text_color: "white"
+            md_bg_color: rgba(144, 144, 153  ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.sign("+")
+        MDRoundFlatButton:
+            text: "+/-"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.minis()
+        MDRoundFlatButton:
+            text: "0"
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.number(0)
+        MDRoundFlatButton:
+            text: "."
+            text_color: "white"
+            md_bg_color: rgba(104, 104, 109 ,255 )
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            font_size : 30
+            on_press:root.dot()
+        MDRoundFlatButton:
+            text: "="
+            text_color: "white"
+            md_bg_color: rgba(91, 103, 243,255)
+            size_hint_x: 0.02
+            size_hint_y : 0.15
+            font_size : 30
+            on_press:root.math()
+
+
+        Widget:
+            size_hint_x: 0.02
+
